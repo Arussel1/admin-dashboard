@@ -1,0 +1,28 @@
+/* CSS variable */
+:root{
+    --text-color:rgb(172, 159, 159);
+    --header-color:rgba(37, 34, 34, 0.863);
+    --background-color:rgb(247, 236, 236);
+    --sidebar-and-button-color: #16a34ad7;
+}
+/*CSS reset */
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+ list-style-type: none;   
+}
+/* Smooth scroll */
+html{
+    scroll-behavior:smooth;
+}
+/* Button styling */
+button{
+    background-color: var(--sidebar-and-button-color);
+    border-radius: 8px;
+}
+button:hover{
+    background-color: rgb(8, 94, 8);
+}
