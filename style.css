@@ -25,11 +25,15 @@ html{
 }
 /* Button styling */
 button{
+    width:6rem;
+    height:2.4rem;
     background-color: var(--sidebar-and-button-color);
     border:0;
-    border-radius: 8px;
+    border-radius: 30px;
     color:var(--sidebar-text-color);
+    font-size:1rem;
     font-weight: 700;
+    margin:1rem;
 }
 button:hover{
     background-color: rgb(8, 94, 8);
@@ -47,17 +51,46 @@ button:hover{
 /*Header position and styling */
 .header{
     grid-area: 1/2/2/4;
+    padding: 1rem 2rem;
 }
-img.profile{
-    width:30px;
+
+
+.first-line,.second-line{
+    display:flex;
+    margin-bottom:2rem;
+}
+.search{
+    border: 0;
+    background-color: rgba(213, 235, 240, 0.678);
+    border-radius: 20px;
+    flex:1;
+    font-size:1rem;
+    margin-right: 3rem;
+    margin-left: 1rem;
+    padding: 2px 2rem;
+}
+.profile{
+    width:50px;
     background-color:rgba(200, 238, 245, 0.747);
     padding:1px;
     border-radius: 50%;
+    margin: 0 1.5rem;
 }
-img.big.profile{
-    width:50px;
+.name{
+    font-weight: 700;
+    align-self: center;
 }
 
+.big.profile{
+    margin-left:0;
+}
+.textarea{
+    margin-right:auto;
+    font-weight: 700;
+}
+.textarea>.big.name{
+    font-size: 1.5rem;
+}
 /*Sidebar position and styling */ 
 .sidebar{
     background-color: var(--sidebar-and-button-color);
