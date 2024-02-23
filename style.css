@@ -4,6 +4,7 @@
     --header-color:rgba(37, 34, 34, 0.863);
     --background-color:rgb(247, 236, 236);
     --sidebar-and-button-color: #16a34ad7;
+    --sidebar-text-color:rgb(233, 224, 224);
 }
 /*CSS reset */
 *,*::before,*::after{
@@ -14,15 +15,81 @@
 ul{
  list-style-type: none;   
 }
+li{
+    margin: 1rem 0;
+}
 /* Smooth scroll */
 html{
     scroll-behavior:smooth;
+    font-family: "Nunito";
 }
 /* Button styling */
 button{
     background-color: var(--sidebar-and-button-color);
+    border:0;
     border-radius: 8px;
+    color:var(--sidebar-text-color);
+    font-weight: 700;
 }
 button:hover{
     background-color: rgb(8, 94, 8);
 }
+/*Icon styling */
+.small-icons{
+    width:20px;
+}
+/* Container styling */
+.container{
+    display:grid;
+    grid-template-rows: 20vh 40vh 40vh;
+    grid-template-columns: minmax(16rem,1fr) 5fr minmax(16rem,1fr);
+} 
+/*Header position and styling */
+.header{
+    grid-area: 1/2/2/4;
+}
+img.profile{
+    width:30px;
+    background-color:rgba(200, 238, 245, 0.747);
+    padding:1px;
+    border-radius: 50%;
+}
+img.big.profile{
+    width:50px;
+}
+
+/*Sidebar position and styling */ 
+.sidebar{
+    background-color: var(--sidebar-and-button-color);
+    color:var(--sidebar-text-color);
+    display: flex;
+    flex-direction: column;
+    font-weight:700;
+    gap:1.25rem;
+    grid-area:1/1/4/2;
+    letter-spacing: 1px;
+    padding:1rem 2rem;
+    
+}
+.title-icon{
+    width:2.5rem;
+}
+.sidebar svg{
+    fill:var(--sidebar-text-color);
+    margin-right:1rem;
+}
+
+/* Cards position and styling */
+.cards{
+    grid-area:2/2/4/3;
+}
+
+/* Annoucements box postion and styling */
+.announcements{
+    grid-area:2/3/3/4;
+}
+
+/* Trends box position and styling */
+.trending{
+    grid-area:3/3/4/4;
+}   
