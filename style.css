@@ -185,3 +185,8 @@ button:hover{
 .trend>.profile{
     margin-left:0;
 }
+@media screen and (max-width: 768px){
+    .container{
+        grid-template-rows: 40vh 30vh 30vh;
+    }
+}
