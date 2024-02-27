@@ -5,7 +5,6 @@
     --background-color:rgba(233, 226, 226, 0.404);
     --sidebar-and-button-color: #16a34ad7;
     --sidebar-text-color:rgb(233, 224, 224);
-    --card-left-border:linear-gradient(orange,blue);
 }
 /*CSS reset */
 *,*::before,*::after{
@@ -52,7 +51,7 @@ button:hover{
 /*Header position and styling */
 .header{
     grid-area: 1/2/2/3;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
 }
 
 
@@ -118,10 +117,11 @@ button:hover{
     padding:2rem;
     grid-area:2/2/4/3;
     display:grid;
-    grid-template-rows: 1.5rem 1fr 2fr;
+    grid-template-rows: 1.5rem min-content 1fr;
     grid-template-columns: 1fr minmax(100px,300px);
     gap:25px;
     background-color: var(--background-color);
+    overflow: auto;
 }
 
 .title{
@@ -129,7 +129,7 @@ button:hover{
 }
 
 .card-container{
-    grid-area: 2/1/3/2;
+    grid-area: 2/1/4/2;
     display:grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     gap:20px;
@@ -160,20 +160,27 @@ button:hover{
 }
 /* Annoucements box postion and styling */
 .announcements{
-    background-color: white;
     grid-area:2/2/3/3;
     display:flex;
     flex-direction: column;
-    padding: 0 2rem;
-    justify-content: center;
 }
-.announcement{
+.announcement,.trend{
+    padding: 1.5rem 2rem;
+    background-color: white;
     border-bottom: 1px dashed black;
 }
 /* Trends box position and styling */
 .trends{
     grid-area:3/2/4/3;
-    background-color: white;
     display:flex;
     flex-direction:column;
 }   
+.trend{
+    display:flex;
+}
+.trends>.title{
+    margin-bottom: 1.5rem;
+}
+.trend>.profile{
+    margin-left:0;
+}
